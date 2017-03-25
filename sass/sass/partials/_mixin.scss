@@ -1,0 +1,97 @@
+//all mixins
+
+//text-shadow
+@mixin text-shadow($top, $left, $blur, $color){
+    -webkit-text-shadow: $top $left $blur $color;
+    text-shadow: $top $left $blur $color;
+}
+
+//border-radius
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//box-shadow
+@mixin box-shadow($top, $left, $blur, $size, $color, $inset: false){
+    @if $inset{
+        -webkit-box-shadow: $inset $top $left $blur $size $color;
+        -moz-box-shadow: $inset $top $left $blur $size $color;
+        -o-box-shadow: $inset $top $left $blur $size $color;
+        -ms-box-shadow: $inset $top $left $blur $size $color;
+        box-shadow: $inset $top $left $blur $size $color;
+    }@else{
+        -webkit-box-shadow: $top $left $blur $size $color;
+        -moz-box-shadow: $top $left $blur $size $color;
+        -o-box-shadow: $top $left $blur $size $color;
+        -ms-box-shadow: $top $left $blur $size $color;
+        box-shadow: $top $left $blur $size $color;
+    }
+}
+
+//css scale
+@mixin scale($x, $y: false, $z: false){
+    @if $z{
+        -webkit-transform: scale3d($x, $y, $z);
+        -moz-transform: scale3d($x, $y, $z);
+        -o-transform: scale3d($x, $y, $z);
+        -ms-transform: scale3d($x, $y, $z);
+        transform: scale3d($x, $y, $z);        
+    }@elseif $y{
+        -webkit-transform: scale($x, $y);
+        -moz-transform: scale($x, $y);
+        -o-transform: scale($x, $y);
+        -ms-transform: scale($x, $y);
+        transform: scale($x, $y);
+    }@else{
+        -webkit-transform: scale($x);
+        -moz-transform: scale($x);
+        -o-transform: scale($x);
+        -ms-transform: scale($x);
+        transform: scale($x);
+    }
+}
+
+//css translate
+@mixin translate($x, $y: false, $z: false){
+    @if $z{
+        -webkit-transform: translate3d($x, $y, $z);
+        -moz-transform: translate3d($x, $y, $z);
+        -o-transform: translate3d($x, $y, $z);
+        -ms-transform: translate3d($x, $y, $z);
+        transform: translate3d($x, $y, $z);        
+    }@elseif $y{
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }@else{
+        -webkit-transform: translate($x);
+        -moz-transform: translate($x);
+        -o-transform: translate($x);
+        -ms-transform: translate($x);
+        transform: translate($x);
+    }
+}
+
+//css transition
+@mixin transition($prop, $timing, $duration){
+    -webkit-transition: $prop $timing $duration;
+    -moz-transition: $prop $timing $duration;
+    -o-transition: $prop $timing $duration;
+    -ms-transition: $prop $timing $duration;
+    transition: $prop $timing $duration;
+}
+
+//transform origin
+@mixin transform-origin($x, $y){
+    -webkit-transform-origin: $x $y;
+    -moz-transform-origin: $x $y;
+    -o-transform-origin: $x $y;
+    -ms-transform-origin: $x $y;
+    transform-origin: $x $y;
+}

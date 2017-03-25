@@ -1,0 +1,9 @@
+//all custom media queries
+$min-width: 320px;
+$mobile-view: $min-width * 2; //>=640px
+$tablet-view: $mobile-view + 128px; //>=768px
+$desktop-view: $tablet-view + 224px; //>=992px
+$hd-view: $desktop-view + 208px; //>=1200px
+    
+
+

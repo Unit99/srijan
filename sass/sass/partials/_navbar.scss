@@ -1,0 +1,258 @@
+//attributes related to
+//header nav
+
+/* generic */
+nav{
+    &.navbar{
+        &.navbar-default{
+            &.navbar-fixed-top{
+                .navbar-header{
+                    a{
+                        &.navbar-brand{
+                            svg{
+                                &#logo{
+                                    .st0{fill:#51B748;}
+                                    .st1{fill:#F48020;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* initializing header nav (e.g. 320px and up) */
+@media screen and (min-width: $min-width){
+    nav{
+    &.navbar{
+        &.navbar-default{
+            &.navbar-fixed-top{
+
+                }
+            }
+        }
+    }
+}
+
+
+/* for tablets(e.g. 768px and up) */
+@media screen and (min-width: $tablet-view){
+    
+    //placeholder for header nav
+    %nav-highlighter{
+        display: inline-block;
+        content: '';
+        background-color: white;
+        @include scale(1);
+        @include transform-origin(50%, 50%);
+        @include transition(all, linear, 0.3s);
+        width: 100%;
+        height: 1px;
+        position: relative;
+        top: 0px;
+        right: 0;
+    }
+    
+    // header navbar
+    nav{
+    &.navbar{
+        &.navbar-default{
+            &.navbar-fixed-top{   
+                background-color: transparent;
+                border: none;
+                padding: 40px 0;   
+                
+                .navbar-header{
+                    a{
+                        &.navbar-brand{ 
+                            
+                            
+                        }
+                    }
+                }
+                
+                .srijan-navbar{
+                    &.navbar-right{
+                        padding: 80px 0;
+                        
+                        ul{
+                            &.nav{
+                                &.navbar-nav{
+                                    li{
+                                        a{
+                                            font-family: $roboto;
+                                            font-weight: $bold;
+                                            font-size: $nav-font;
+                                            text-transform: capitalize;
+                                            text-align: center;
+                                            color: white;
+                                            
+                                            &::after{
+                                                @extend %nav-highlighter;
+                                                @include scale(0);
+                                            }
+                                            
+                                            &:hover{
+                                                &::after{
+                                                    @extend %nav-highlighter;
+                                                }
+                                            }
+                                        }  
+                                        
+                                        //active state
+                                        &.active{
+                                            a{
+                                                background-color: transparent;
+                                                
+                                                &::after{
+                                                    @extend %nav-highlighter;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            //while scrolling
+            &.top-nav-collapse{
+                background-color: rgba(0, 0, 0, 0.3);
+                padding: 0;
+                
+                .navbar-header{
+                    a{
+                        &.navbar-brand{
+                            background-color: transparent;
+                            height: auto;
+                            max-height: 90px;
+                            padding: 0 90px;
+                        }
+                    }
+                }
+                
+                .srijan-navbar{
+                    &.navbar-right{
+                        padding: 20px 0;
+                        padding-bottom: 0;
+                        
+                        ul{
+                            &.nav{
+                                &.navbar-nav{
+                                    li{
+                                        a{
+                                            color: white;
+                                            
+                                            &:hover{
+                                                &::after{background-color: white;}
+                                            }
+                                        }
+                                        
+                                        &.active{
+                                            a{
+                                                &::after{background-color: white;}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+/* for hd screens(e.g. 1200px and up) */
+@media screen and (min-width: $hd-view){
+    nav{
+    &.navbar{
+        &.navbar-default{
+            &.navbar-fixed-top{   
+                background-color: transparent;
+                border: none;
+                padding: 40px 0;   
+                
+                .navbar-header{
+                    a{
+                        &.navbar-brand{                            
+                            background-color: white;
+                            @include border-radius(50%);
+                            border-top-left-radius: 0;
+                            border-bottom-left-radius: 0;
+                            height: 190px;
+                            padding: 0;
+                            width: 190px;
+                            
+                            svg{
+                                &#logo{ 
+                                    width: 100%;
+                                    height: auto; //making the svg logo responsive
+                                    position: relative;
+                                    margin-top: 0;
+                                    margin-left: -15px;
+                                    @include transition(all, linear, 0.3s);
+                                    
+                                    g#rounded-text, g#srijan{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .srijan-navbar{
+                    &.navbar-right{
+                        ul{
+                            &.nav{
+                                &.navbar-nav{
+                                    padding-right: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            
+            //while scrolling
+            &.top-nav-collapse{
+                background-color: rgba(0, 0, 0, 0.3);
+                padding: 0;
+                
+                .navbar-header{
+                    a{
+                        &.navbar-brand{
+                            background-color: transparent;
+                            height: auto;
+                            
+                            svg{
+                                &#logo{
+                                    margin-left: 0;
+                                    margin-top: -12px;
+                                    width: 65%;
+                                    
+                                    g#rounded-text, g#srijan{
+                                        opacity: 0;
+                                        @include transition(all, linear, 0.3s);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                
+            }
+        }
+    }
+}
+}

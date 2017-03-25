@@ -1,0 +1,122 @@
+/*
+********************************************
+Subject: Global stylesheet for Srijan Bangla
+Site: Srijan|Welfare Society
+Site URI: http://srijanbangla.com/
+Author: Sanjib Adhya
+Author URI: http://apeandme.com/
+Date: 03/13/2017
+Version: 1.0
+Tags: bootstrap, single-page, parallax, css3, svg
+********************************************
+*/
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,900|Roboto:300,900");
+/* line 64, ../sass/main.scss */
+html, body { background-color: white; box-sizing: border-box; font-family: sans-serif; font-size: 16px; font-weight: normal; line-height: normal; color: black; text-align: left; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+
+/* line 80, ../sass/main.scss */
+.welcome-section, .about-section { padding-top: 0; overflow-x: hidden; }
+/* line 84, ../sass/main.scss */
+.welcome-section .container-fluid, .about-section .container-fluid { padding-left: 0; padding-right: 0; }
+
+/* welcome section */
+/* line 90, ../sass/main.scss */
+.welcome-section { background: none; }
+
+/* about section */
+/* line 96, ../sass/main.scss */
+.about-section .upper-wave { position: absolute; z-index: 2; width: 100%; overflow: hidden; }
+/* line 103, ../sass/main.scss */
+.about-section .upper-wave svg#shape { height: 85px; }
+
+/* generic */
+/* line 14, ../sass/partials/_navbar.scss */
+nav.navbar.navbar-default.navbar-fixed-top .navbar-header a.navbar-brand svg#logo .st0 { fill: #51B748; }
+/* line 15, ../sass/partials/_navbar.scss */
+nav.navbar.navbar-default.navbar-fixed-top .navbar-header a.navbar-brand svg#logo .st1 { fill: #F48020; }
+
+/* initializing header nav (e.g. 320px and up) */
+/* for tablets(e.g. 768px and up) */
+@media screen and (min-width: 768px) { /* line 45, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.navbar-fixed-top .srijan-navbar.navbar-right ul.nav.navbar-nav li a::after, nav.navbar.navbar-default.navbar-fixed-top .srijan-navbar.navbar-right ul.nav.navbar-nav li a:hover::after, nav.navbar.navbar-default.navbar-fixed-top .srijan-navbar.navbar-right ul.nav.navbar-nav li.active a::after { display: inline-block; content: ''; background-color: white; -webkit-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1); -ms-transform: scale(1); transform: scale(1); -webkit-transform-origin: 50% 50%; -moz-transform-origin: 50% 50%; -o-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transition: all linear 0.3s; -moz-transition: all linear 0.3s; -o-transition: all linear 0.3s; -ms-transition: all linear 0.3s; transition: all linear 0.3s; width: 100%; height: 1px; position: relative; top: 0px; right: 0; }
+  /* line 63, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.navbar-fixed-top { background-color: transparent; border: none; padding: 40px 0; }
+  /* line 78, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.navbar-fixed-top .srijan-navbar.navbar-right { padding: 80px 0; }
+  /* line 85, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.navbar-fixed-top .srijan-navbar.navbar-right ul.nav.navbar-nav li a { font-family: "Roboto", sans-serif; font-weight: 900; font-size: 22px; text-transform: capitalize; text-align: center; color: white; }
+  /* line 93, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.navbar-fixed-top .srijan-navbar.navbar-right ul.nav.navbar-nav li a::after { -webkit-transform: scale(0); -moz-transform: scale(0); -o-transform: scale(0); -ms-transform: scale(0); transform: scale(0); }
+  /* line 107, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.navbar-fixed-top .srijan-navbar.navbar-right ul.nav.navbar-nav li.active a { background-color: transparent; }
+  /* line 124, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.top-nav-collapse { background-color: rgba(0, 0, 0, 0.3); padding: 0; }
+  /* line 130, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.top-nav-collapse .navbar-header a.navbar-brand { background-color: transparent; height: auto; max-height: 90px; padding: 0 90px; }
+  /* line 140, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.top-nav-collapse .srijan-navbar.navbar-right { padding: 20px 0; padding-bottom: 0; }
+  /* line 148, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.top-nav-collapse .srijan-navbar.navbar-right ul.nav.navbar-nav li a { color: white; }
+  /* line 152, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.top-nav-collapse .srijan-navbar.navbar-right ul.nav.navbar-nav li a:hover::after { background-color: white; }
+  /* line 158, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.top-nav-collapse .srijan-navbar.navbar-right ul.nav.navbar-nav li.active a::after { background-color: white; } }
+/* for hd screens(e.g. 1200px and up) */
+@media screen and (min-width: 1200px) { /* line 178, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.navbar-fixed-top { background-color: transparent; border: none; padding: 40px 0; }
+  /* line 185, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.navbar-fixed-top .navbar-header a.navbar-brand { background-color: white; -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; -ms-border-radius: 50%; border-radius: 50%; border-top-left-radius: 0; border-bottom-left-radius: 0; height: 190px; padding: 0; width: 190px; }
+  /* line 195, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.navbar-fixed-top .navbar-header a.navbar-brand svg#logo { width: 100%; height: auto; position: relative; margin-top: 0; margin-left: -15px; -webkit-transition: all linear 0.3s; -moz-transition: all linear 0.3s; -o-transition: all linear 0.3s; -ms-transition: all linear 0.3s; transition: all linear 0.3s; }
+  /* line 203, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.navbar-fixed-top .navbar-header a.navbar-brand svg#logo g#rounded-text, nav.navbar.navbar-default.navbar-fixed-top .navbar-header a.navbar-brand svg#logo g#srijan { opacity: 1; }
+  /* line 216, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.navbar-fixed-top .srijan-navbar.navbar-right ul.nav.navbar-nav { padding-right: 15px; }
+  /* line 227, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.top-nav-collapse { background-color: rgba(0, 0, 0, 0.3); padding: 0; }
+  /* line 233, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.top-nav-collapse .navbar-header a.navbar-brand { background-color: transparent; height: auto; }
+  /* line 238, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.top-nav-collapse .navbar-header a.navbar-brand svg#logo { margin-left: 0; margin-top: -12px; width: 65%; }
+  /* line 243, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.top-nav-collapse .navbar-header a.navbar-brand svg#logo g#rounded-text, nav.navbar.navbar-default.top-nav-collapse .navbar-header a.navbar-brand svg#logo g#srijan { opacity: 0; -webkit-transition: all linear 0.3s; -moz-transition: all linear 0.3s; -o-transition: all linear 0.3s; -ms-transition: all linear 0.3s; transition: all linear 0.3s; } }
+/* line 4, ../sass/partials/_swiper.scss */
+.swiper-container { width: 100%; height: 100%; background-color: black; }
+/* line 9, ../sass/partials/_swiper.scss */
+.swiper-container .swiper-slide { background-repeat: no-repeat; background-position: left top; /* different background images */ }
+/* line 14, ../sass/partials/_swiper.scss */
+.swiper-container .swiper-slide#swiper-bg-1 { background-image: url(../img/swiper-bg/swiper-bg-1-2x.jpg); }
+/* line 15, ../sass/partials/_swiper.scss */
+.swiper-container .swiper-slide#swiper-bg-2 { background-image: url(../img/swiper-bg/swiper-bg-2-2x.jpg); }
+/* line 16, ../sass/partials/_swiper.scss */
+.swiper-container .swiper-slide#swiper-bg-3 { background-image: url(../img/swiper-bg/swiper-bg-3-2x.jpg); }
+/* line 18, ../sass/partials/_swiper.scss */
+.swiper-container .swiper-slide .swiper-header, .swiper-container .swiper-slide .swiper-caption { font-family: "Merriweather", sans-serif; font-size: 300px; font-weight: 900; color: #5ce354; }
+/* line 25, ../sass/partials/_swiper.scss */
+.swiper-container .swiper-slide .swiper-caption { font-size: 55px; color: white; }
+/* line 32, ../sass/partials/_swiper.scss */
+.swiper-container .swiper-pagination { display: none; }
+
+@media screen and (min-width: 320px) { /* line 42, ../sass/partials/_swiper.scss */
+  .swiper-container .swiper-wrapper .swiper-slide { background-size: cover; } }
+@media screen and (min-width: 768px) { /* line 50, ../sass/partials/_swiper.scss */
+  .swiper-container, .swiper-wrapper, .swiper-slide { min-height: 700px; } }
+/* Center slide text vertically => upto 992px */
+@media screen and (max-width: 992px) { /* line 59, ../sass/partials/_swiper.scss */
+  .swiper-container .swiper-wrapper .swiper-slide { display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; } }
+@media screen and (min-width: 1200px) { /* line 82, ../sass/partials/_swiper.scss */
+  .swiper-container .swiper-slide .swiper-header, .swiper-container .swiper-slide .swiper-caption { position: relative; top: 155px; left: -150px; opacity: 0.8; -webkit-text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5); text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5); }
+  /* line 90, ../sass/partials/_swiper.scss */
+  .swiper-container .swiper-slide .swiper-caption { position: absolute; z-index: 1; left: 100px; top: 290px; width: 100%; text-align: left; -webkit-text-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); text-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); }
+  /* line 104, ../sass/partials/_swiper.scss */
+  .swiper-pagination { display: block !important; right: 50px; top: 50%; }
+  /* line 110, ../sass/partials/_swiper.scss */
+  .swiper-pagination span.swiper-pagination-bullet { background-color: transparent; width: 30px; height: 30px; position: relative; clear: both; display: table; margin-bottom: 12px; opacity: 1; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; -ms-border-radius: 0; border-radius: 0; font-family: "Roboto", sans-serif; font-size: 20px; font-weight: 900; color: white; line-height: 30px; text-align: center; }
+  /* line 128, ../sass/partials/_swiper.scss */
+  .swiper-pagination span.swiper-pagination-bullet::after { position: absolute; z-index: -1; background-color: transparent; opacity: 0; left: 0; top: 0; width: 100%; height: 100%; display: inline-block; content: ''; -webkit-transform: scale(0); -moz-transform: scale(0); -o-transform: scale(0); -ms-transform: scale(0); transform: scale(0); -webkit-transform-origin: center center; -moz-transform-origin: center center; -o-transform-origin: center center; -ms-transform-origin: center center; transform-origin: center center; -webkit-transition: all linear 0.2s; -moz-transition: all linear 0.2s; -o-transition: all linear 0.2s; -ms-transition: all linear 0.2s; transition: all linear 0.2s; }
+  /* line 144, ../sass/partials/_swiper.scss */
+  .swiper-pagination span.swiper-pagination-bullet:hover, .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active { color: black; }
+  /* line 147, ../sass/partials/_swiper.scss */
+  .swiper-pagination span.swiper-pagination-bullet:hover::after, .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active::after { background-color: white; opacity: 1; -webkit-box-shadow: 0 1px 5px 0px black; -moz-box-shadow: 0 1px 5px 0px black; -o-box-shadow: 0 1px 5px 0px black; -ms-box-shadow: 0 1px 5px 0px black; box-shadow: 0 1px 5px 0px black; -webkit-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1); -ms-transform: scale(1); transform: scale(1); -webkit-transition: all linear 0.2s; -moz-transition: all linear 0.2s; -o-transition: all linear 0.2s; -ms-transition: all linear 0.2s; transition: all linear 0.2s; } }
+@media screen and (min-width: 992px) { /* line 122, ../sass/main.scss */
+  .about-section .upper-wave { bottom: 0; left: 0; } }
