@@ -76,8 +76,9 @@ html, body{
     text-rendering: optimizeLegibility;
 }
 
-//sections
-.welcome-section, .about-section{
+//generic attributes for sections
+.welcome-section, .about-section, .mission-section, .events-section, .donate-section, .contact-section{
+    background-color: white;
     padding-top: 0;
     overflow-x: hidden;
     
@@ -86,26 +87,10 @@ html, body{
         padding-right: 0;
     }
 }
-/* welcome section */
+
 .welcome-section{
-    background: none; 
-}
-
-/* about section */
-.about-section{
-    .upper-wave{
-        position: absolute;
-        z-index: 2;
-        width: 100%;
-        overflow: hidden;
-        
-        svg{
-            &#shape{height: 85px;}
-        }
-    }
-}
-
-
+    background-color: rgba(95, 236, 86, 1);
+}//rest of the welcome section based attributes are coming from _swiper.scss partial
 
 
 //partials
@@ -116,12 +101,11 @@ html, body{
 @import 'partials/navbar';
 @import 'partials/swiper';
 
-//media attributes
-@media screen and (min-width: $desktop-view){
-    .about-section{
-        .upper-wave{
-            bottom: 0;
-            left: 0;
-        }
-    }
-}
+
+//section based partials
+@import 'partials/about';
+@import 'partials/mission';
+@import 'partials/events';
+@import 'partials/donate';
+
+

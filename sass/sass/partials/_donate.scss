@@ -1,0 +1,225 @@
+/* donate section */
+.donate-section{
+    //events content section
+    .container-fluid{
+        &.white{
+            background-color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left top;
+            background-attachment: fixed;
+            
+            //placeholder for centering all blocks inside hgroup
+            %center{
+                display: flex;
+                display: -webkit-flex;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-align-content: center;
+                align-content: center;
+            }
+            
+            hgroup{        
+                h1{
+                    @extend %center;            
+                    font-family: $merriweather;
+                    font-size: $global-header;
+                    font-weight: $bold;
+                    color: rgba(0, 0, 0, 0.5);
+                    text-align: center;
+                    text-transform: capitalize;
+
+                    margin-top: 80px;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+        
+                span{
+                    @extend %center;
+                    font-family: $merriweather;
+                    font-size: $global-caption;
+                    font-weight: $merriweather-regular;
+                    color: black;
+                    text-align: center;
+                    line-height: 1.6;
+                    @include text-shadow(0, 3px, 1px, rgba(0, 0, 0, 0.1));            
+            
+                    margin-top: 0;
+                    padding-top: 0;
+                    padding-bottom: 40px;
+                }
+            }
+            
+            section{
+                padding-top: 70px;
+                padding-bottom: 50px;
+                
+                h2{
+                    font-family: $merriweather;
+                    font-size: $global-semi-header;
+                    font-weight: $merriweather-regular;
+                    text-align: left;
+                    color: $orange;
+                    
+                    margin-top: 50px;
+                    margin-bottom: 20px;
+                }
+                
+                .media{
+                    .media-left{
+                        span{
+                            &.step{
+                                background-color: $orange;
+                                padding: 0px 6px;
+                                font-family: $roboto;
+                                font-size: $global-caption;
+                                font-weight: $bold;
+                                color: white;
+                                text-align: center;
+                                line-height: normal;
+                                
+                                display: inline-block;
+                            }
+                        }
+                    }
+                    
+                    .media-body{
+                        font-family: $roboto;
+                        font-size: $global-text;
+                        font-weight: $roboto-regular;
+                        text-align: left;
+                        line-height: normal;
+                        color: $dark-green;
+                    }
+                }
+            }
+            
+            /* donate button block */
+            section{
+                &.sponsor-here{
+                    background-image: url(../img/donate/donate-btn-bg.jpg);
+                    background-repeat: no-repeat;
+                    background-position: left top;
+                    background-size: cover;
+                    position: relative;
+                    z-index: 1;
+                    
+                    hgroup{
+                        h2{
+                            @extend %center;            
+                            font-family: $merriweather;
+                            font-size: $global-semi-header;
+                            font-weight: $merriweather-regular;
+                            color: white;
+                            text-align: center;
+                            line-height: 1.5;
+
+                            margin-top: 30px;
+                            margin-bottom: 0;
+                            padding-bottom: 0; 
+                        }
+                        
+                        span{
+                            font-family: $roboto;
+                            font-size: $global-alert;
+                            font-weight: $roboto-regular;
+                            text-align: center;
+                            color: white;
+                            
+                            padding: 16px 0;
+                        }
+                    }
+                    
+                    .btn{
+                        &.btn-default{
+                            width: 100%;
+                            background: none;
+                            border: none;
+                            
+                            a{
+                                width: 100%;
+                                margin: 0 auto;
+                                max-width: 300px;
+                                padding: 12px;
+                                display: block;
+                                cursor: pointer;
+                                background-color: rgba(79, 185, 72, 1);
+                                @include border-radius(50px);
+                                
+                                font-family: $roboto;
+                                font-size: $global-btn-txt;
+                                font-weight: $bold;
+                                text-align: center;
+                                line-height: normal;
+                                color: white;
+                                
+                                &:hover{
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//1200px and up
+@media screen and (min-width: $hd-view){
+    .donate-section{
+        height: 1000px;
+        overflow: hidden;
+        
+        .container-fluid{
+            &.white{
+                background-image: url(../img/donate/donate-bg.jpg);
+                background-position: left -300px;
+            }
+            
+            section{
+                div{
+                    &.col-lg-4{
+                        &:first-of-type{
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+            
+            /* donate button block */
+            section{
+                &.sponsor-here{
+                                        
+                    .btn{
+                        &.btn-default{
+                            position: absolute;
+                            bottom: -30px;
+                            left: 0;
+                            @include transition(all, linear, 0.1s);
+                            
+                            a{
+                                @include box-shadow(0, 7px ,0, 2px, $dark-green);
+                                @include transition(all, linear, 0.1s);
+                            }
+                            
+                            &:hover, &:focus{
+                                bottom: -35px;
+                                @include transition(all, linear, 0.1s);
+                                
+                                a{
+                                    @include box-shadow(0, 2px ,0, 2px, $dark-green);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//FHD => 1600px and up
+@media screen and (min-width: $hd-view + 400px){
+    
+}

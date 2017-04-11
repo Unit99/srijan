@@ -156,3 +156,10 @@
             }
     }
 }
+
+//FHD => 1600px and up
+@media screen and (min-width: $hd-view + 400px){
+    .welcome-section{
+        height: 772px;
+    }
+}

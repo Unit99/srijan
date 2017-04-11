@@ -1,0 +1,231 @@
+/* about section */
+.about-section{
+    
+    //top wave shaped svg
+    .upper-wave, .bottom-wave{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        overflow: hidden;
+        display: none;
+       
+        svg{
+            &#shape{height: 85px;}
+        }
+    }
+    
+    //about content section
+    .container-fluid{
+        .col-lg-12{
+            &.green{
+                background-color: rgba(95, 236, 86, 1);
+                
+                //context image with parallax scrolling
+                aside{
+                    &.context-img{
+                        max-width: 100%; 
+                        height: auto; 
+                        position: relative; 
+                        z-index: 1;
+                        padding-left: 0;                        
+                        
+                        .bordered-content{
+                            display: none;
+                            position: absolute;
+                            z-index: 1;
+                            right: -48px;
+                            top: 60px;
+                            background-color: transparent;
+                            border: 25px solid $orange;
+                            border-right: none;
+                            padding: 100px 130px;
+                            
+                            &::before, &::after{
+                                position: absolute;
+                                right: 0;
+                                bottom: 0;
+                                background-color: $orange;
+                                content: '';
+                                width: 25px;
+                                height: 33px;
+                            }
+                            
+                            &::after{
+                                top: 0;
+                                height: 68px;
+                            }
+                            
+                            span{
+                                &.caption{
+                                    font-family: $merriweather;
+                                    font-size: $global-caption;
+                                    font-weight: $merriweather-regular;
+                                    color: white;
+                                    text-align: left;
+                                    line-height: 1.6;
+                                    @include text-shadow(0, 3px, 1px, rgba(0, 0, 0, 0.1));
+                                    position: relative;
+                                    z-index: 2;
+                                
+                                    small{
+                                        font-size: inherit;
+                                        color: $green;
+                                    }
+                                }
+                            }
+                        }                        
+                    }
+                }
+                
+                //right side main content
+                article{
+                    h1{
+                        font-family: $merriweather;
+                        font-size: $global-header;
+                        font-weight: $bold;
+                        color: rgba(64, 136, 60, 0.5);
+                        text-align: center;
+                        text-transform: capitalize;
+                    }
+                    
+                    p{
+                        font-family: $roboto;
+                        font-size: $global-text;
+                        font-weight: $roboto-regular;
+                        color: $dark-green;
+                        text-align: justify;
+                        line-height: 1.6;
+                        padding-top: 20px;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//1200px and up
+@media screen and (min-width: $hd-view){
+    .about-section{
+        margin-top: -5px;
+        height: 700px;
+        overflow: hidden;
+        
+        .upper-wave{
+            display: block;
+            bottom: 44px;
+            left: 0;
+        }
+        
+        .container-fluid{
+            background-color: rgba(95, 236, 86, 1);
+            min-height: 600px;
+            padding-top: 60px;
+            
+            .col-lg-12{
+                &.green{
+                    aside{
+                        &.context-img{
+                            .bordered-content{
+                                display: block;
+                                
+                                span{
+                                    &.caption{
+                                    position: absolute;
+                                    left: 56%;
+                                    top: 70px;
+                                    width: 650px;
+                                    }
+                                }
+                            }
+                            
+                            img{@include box-shadow(-40px, 21px, 1px, 0, rgba(0, 0, 0 ,0.4));}
+                        }
+                    }
+                    
+                    //right side main content
+                    article{
+                        h1{
+                            padding-right: 50px;
+                            text-align: right;
+                        }
+                        
+                        p{
+                            padding-top: 50px;
+                            padding-left: 55px;
+                            padding-right: 55px;
+                        }
+                    }
+            }
+            }
+        }
+        
+        .bottom-wave{
+            display: block;
+            bottom: -678px;
+            z-index: 3;
+            @include rotate(180deg);            
+        }
+    }
+}
+
+//HD => 1440px and up
+@media screen and (min-width: $hd-view + 240px){
+    .about-section{
+        margin-top: -156px;
+        
+        .upper-wave{
+            bottom: 151px;
+        }
+        
+        .bottom-wave{
+            bottom: -528px;
+        }
+    }
+}
+
+//1500px and up
+@media screen and (min-width: $hd-view + 300px){
+    .about-section{
+        margin-top: -130px;
+        
+        .upper-wave{
+            bottom: 44px;
+        }
+        
+        .bottom-wave{
+            bottom: -550px;
+        }
+    }
+}
+
+//FHD => 1600px and up
+@media screen and (min-width: $hd-view + 400px){
+    .about-section{
+        margin-top: -5px;
+        
+        .upper-wave{
+            bottom: 450px;
+        }
+        
+        .bottom-wave{
+            bottom: -248px;
+        }
+    }
+}
+
+//FHD => 1900px and up
+@media screen and (min-width: $hd-view + 700px){
+    .about-section{
+        .upper-wave{
+            bottom: 272px;
+        }
+        
+        .bottom-wave{
+            bottom: -425px;
+        }
+    }
+}

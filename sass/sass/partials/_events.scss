@@ -1,0 +1,196 @@
+/* events section */
+.events-section{
+    //events content section
+    .container-fluid{
+        .col-lg-12{
+            &.orange{
+                
+                /* gradient background */
+                background: rgb(252,153,69);
+                background: -moz-linear-gradient(top, rgba(252,153,69,1) 0%, rgba(246,130,31,1) 100%);
+                background: -webkit-linear-gradient(top, rgba(252,153,69,1) 0%,rgba(246,130,31,1) 100%);
+                background: linear-gradient(to bottom, rgba(252,153,69,1) 0%,rgba(246,130,31,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc9945', endColorstr='#f6821f',GradientType=0 );
+                
+                padding-top: 70px;
+                padding-bottom: 70px;
+                
+                //left side main content
+                section{
+                    h1{
+                        font-family: $merriweather;
+                        font-size: $global-header;
+                        font-weight: $bold;
+                        color: rgba(211, 98, 1, 0.5);
+                        text-align: right;
+                        text-transform: capitalize;
+                        
+                        padding-right: 100px;
+                        padding-top: 100px;
+                    }
+                    
+                    .article-cols{
+                        .panel{
+                            box-shadow: none;
+                            
+                            &.panel-default{
+                                background: none;
+                                border: none;
+                                @include border-radius(0);
+                                
+                                .panel-heading{
+                                    background-color: transparent;
+                                    border: none;
+                                    @include border-radius(0);
+                                    padding-bottom: 5px;
+                                    
+                                    .panel-title{
+                                        background-image: url(../img/events/calendar-icon.png);
+                                        background-repeat: no-repeat;
+                                        background-position: 0 0;
+                                        padding-left: 32px;
+                                        
+                                        font-family: $merriweather;
+                                        font-size: $article-title;
+                                        font-weight: $bold;
+                                        color: $dark-orange;
+                                        text-align: left;
+                                        
+                                        span{
+                                            font-family: $roboto;
+                                            font-size: $article-date;
+                                            font-weight: $roboto-regular;
+                                            color: $dark-orange;
+                                            text-align: left;
+                                            line-height: normal;
+                                            padding-top: 2px;
+                                            display: table-cell;
+                                            width: 100%;
+                                            clear: both;
+                                        }
+                                    }
+                                }
+                                
+                                .panel-body{
+                                    font-family: $roboto;
+                                    font-size: $article-text;
+                                    font-weight: $roboto-regular;
+                                    text-align: left;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                
+                //context image with parallax scrolling
+                aside{
+                    &.context-img{
+                        max-width: 100%; 
+                        height: auto; 
+                        position: relative; 
+                        z-index: 1;
+                        padding-left: 0;   
+                        
+                        .bordered-content{
+                            display: none;
+                            position: absolute;
+                            z-index: 1;
+                            right: 325px;
+                            top: -20px;
+                            background-color: transparent;
+                            border: 25px solid rgba(79, 185, 72, 1);
+                            border-left: none;
+                            padding: 100px 130px;
+                            
+                            &::before, &::after{
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                background-color: rgba(79, 185, 72, 1);
+                                content: '';
+                                width: 25px;
+                                height: 64px;
+                            }
+                            
+                            &::after{
+                                top: 0;
+                                height: 100px;
+                            }
+                            
+                            span{
+                                &.caption{
+                                    font-family: $merriweather;
+                                    font-size: $global-caption;
+                                    font-weight: $merriweather-regular;
+                                    color: white;
+                                    text-align: right;
+                                    line-height: 1.6;
+                                    @include text-shadow(0, 3px, 1px, rgba(0, 0, 0, 0.1));
+                                    position: absolute;
+                                    z-index: 2;
+                                    width: 500px;
+                                    left: -152%;
+                                    overflow: hidden;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//1200px and up
+@media screen and (min-width: $hd-view){
+    .events-section{
+        .container-fluid{
+            background-color: transparent;
+            min-height: 600px;
+            padding-top: 60px;
+            
+            .col-lg-12{
+                &.orange{
+                    aside{
+                        &.context-img{
+                            .bordered-content{display: block;}
+                            
+                            img{
+                                @include box-shadow(16px, 17px, 1px, 0, rgba(211, 98, 1, 0.8));
+                                position: relative;
+                                right: 19px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//FHD => 1600px and up
+@media screen and (min-width: $hd-view + 400px){
+    .events-section{
+        .container-fluid{
+            .col-lg-12{
+                &.orange{
+                    section{
+                        h1{
+                            padding-top: 60px;
+                        }
+                    }
+                    
+                    aside{
+                        &.context-img{
+                            img{
+                                right: -110px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

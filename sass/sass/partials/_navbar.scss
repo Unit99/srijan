@@ -130,8 +130,7 @@ nav{
                         &.navbar-brand{
                             background-color: transparent;
                             height: auto;
-                            max-height: 90px;
-                            padding: 0 90px;
+                            max-height: 50px;
                         }
                     }
                 }
@@ -248,8 +247,23 @@ nav{
                             }
                         }
                     }
-                }
+                }                
                 
+                .srijan-navbar{
+                    &.navbar-right{
+                        ul{
+                            &.nav{
+                                &.navbar-nav{
+                                    li{
+                                        a{
+                                            font-size: $global-text;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 
             }
         }

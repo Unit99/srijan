@@ -78,6 +78,29 @@
     }
 }
 
+//css rotate
+@mixin rotate($x, $y: false, $z: false){
+    @if $z{
+        -webkit-transform: rotate3d($x, $y, $z);
+        -moz-transform: rotate3d($x, $y, $z);
+        -o-transform: rotate3d($x, $y, $z);
+        -ms-transform: rotate3d($x, $y, $z);
+        transform: rotate3d($x, $y, $z);        
+    }@elseif $y{
+        -webkit-transform: rotate($x, $y);
+        -moz-transform: rotate($x, $y);
+        -o-transform: rotate($x, $y);
+        -ms-transform: rotate($x, $y);
+        transform: rotate($x, $y);
+    }@else{
+        -webkit-transform: rotate($x);
+        -moz-transform: rotate($x);
+        -o-transform: rotate($x);
+        -ms-transform: rotate($x);
+        transform: rotate($x);
+    }
+}
+
 //css transition
 @mixin transition($prop, $timing, $duration){
     -webkit-transition: $prop $timing $duration;

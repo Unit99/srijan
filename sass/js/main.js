@@ -20,8 +20,35 @@ function introSwiper() {
 });
     
 }
-
 introSwiper();
 
+//parallax scroll initialized
+function pageParallax(){new Rellax(".rellax")}
+pageParallax();
 
+//scroll reveal
+window.sr = ScrollReveal();
+var headerReveal = document.body.querySelectorAll('.titleRevealFromFade'),
+    contentReveal = document.body.querySelectorAll('.textRevealFromFade');
+sr.reveal(headerReveal, {
+    origin: 'top',
+    distance: '50px',
+    duration: 1500,
+    delay: 50,
+    opacity: 0,
+    easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+    mobile: true,
+    reset: false,
+});
+
+sr.reveal(contentReveal, {
+    origin: 'bottom',
+    distance: '55px',
+    duration: 1700,
+    delay: 55,
+    opacity: 0,
+    easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+    mobile: true,
+    reset: false,
+});
 

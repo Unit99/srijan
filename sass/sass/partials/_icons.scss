@@ -1,0 +1,37 @@
+//all sprite icons
+
+//mixin for icon dimensions
+@mixin icon-size($width, $height, $display){
+    width: $width;
+    height: $height;
+    display: $display;
+}
+
+//icons for mission section
+$mission-icon-spacing: 10px;
+$mission-icon-layout: horizontal;
+@import '../img/mission-icon/*.png';
+
+.water-icon{
+    @include mission-icon-sprite(water);
+}
+
+.sanitation-icon{
+    @include mission-icon-sprite(sanitation);
+}
+
+.health-icon{
+    @include mission-icon-sprite(health);
+}
+
+.education-icon{
+    @include mission-icon-sprite(education);
+}
+
+.blood-icon{
+    @include mission-icon-sprite(blood);
+}
+
+.houses-icon{
+    @include mission-icon-sprite(houses);
+}

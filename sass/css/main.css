@@ -15,19 +15,33 @@ Tags: bootstrap, single-page, parallax, css3, svg
 html, body { background-color: white; box-sizing: border-box; font-family: sans-serif; font-size: 16px; font-weight: normal; line-height: normal; color: black; text-align: left; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
 
 /* line 80, ../sass/main.scss */
-.welcome-section, .about-section { padding-top: 0; overflow-x: hidden; }
-/* line 84, ../sass/main.scss */
-.welcome-section .container-fluid, .about-section .container-fluid { padding-left: 0; padding-right: 0; }
+.welcome-section, .about-section, .mission-section, .events-section, .donate-section, .contact-section { background-color: white; padding-top: 0; overflow-x: hidden; }
+/* line 85, ../sass/main.scss */
+.welcome-section .container-fluid, .about-section .container-fluid, .mission-section .container-fluid, .events-section .container-fluid, .donate-section .container-fluid, .contact-section .container-fluid { padding-left: 0; padding-right: 0; }
 
-/* welcome section */
-/* line 90, ../sass/main.scss */
-.welcome-section { background: none; }
+/* line 91, ../sass/main.scss */
+.welcome-section { background-color: #5fec56; }
 
-/* about section */
-/* line 96, ../sass/main.scss */
-.about-section .upper-wave { position: absolute; z-index: 2; width: 100%; overflow: hidden; }
-/* line 103, ../sass/main.scss */
-.about-section .upper-wave svg#shape { height: 85px; }
+/* line 88, ../img/mission-icon/*.png */
+.mission-icon-sprite, .water-icon, .sanitation-icon, .health-icon, .education-icon, .blood-icon, .houses-icon { background-image: url('../img/../img/mission-icon-s270f0eec74.png'); background-repeat: no-repeat; }
+
+/* line 15, ../sass/partials/_icons.scss */
+.water-icon { background-position: -630px 0; }
+
+/* line 19, ../sass/partials/_icons.scss */
+.sanitation-icon { background-position: -504px 0; }
+
+/* line 23, ../sass/partials/_icons.scss */
+.health-icon { background-position: -252px 0; }
+
+/* line 27, ../sass/partials/_icons.scss */
+.education-icon { background-position: -126px 0; }
+
+/* line 31, ../sass/partials/_icons.scss */
+.blood-icon { background-position: 0 0; }
+
+/* line 35, ../sass/partials/_icons.scss */
+.houses-icon { background-position: -378px 0; }
 
 /* generic */
 /* line 14, ../sass/partials/_navbar.scss */
@@ -52,34 +66,36 @@ nav.navbar.navbar-default.navbar-fixed-top .navbar-header a.navbar-brand svg#log
   /* line 124, ../sass/partials/_navbar.scss */
   nav.navbar.navbar-default.top-nav-collapse { background-color: rgba(0, 0, 0, 0.3); padding: 0; }
   /* line 130, ../sass/partials/_navbar.scss */
-  nav.navbar.navbar-default.top-nav-collapse .navbar-header a.navbar-brand { background-color: transparent; height: auto; max-height: 90px; padding: 0 90px; }
-  /* line 140, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.top-nav-collapse .navbar-header a.navbar-brand { background-color: transparent; height: auto; max-height: 50px; }
+  /* line 139, ../sass/partials/_navbar.scss */
   nav.navbar.navbar-default.top-nav-collapse .srijan-navbar.navbar-right { padding: 20px 0; padding-bottom: 0; }
-  /* line 148, ../sass/partials/_navbar.scss */
+  /* line 147, ../sass/partials/_navbar.scss */
   nav.navbar.navbar-default.top-nav-collapse .srijan-navbar.navbar-right ul.nav.navbar-nav li a { color: white; }
-  /* line 152, ../sass/partials/_navbar.scss */
+  /* line 151, ../sass/partials/_navbar.scss */
   nav.navbar.navbar-default.top-nav-collapse .srijan-navbar.navbar-right ul.nav.navbar-nav li a:hover::after { background-color: white; }
-  /* line 158, ../sass/partials/_navbar.scss */
+  /* line 157, ../sass/partials/_navbar.scss */
   nav.navbar.navbar-default.top-nav-collapse .srijan-navbar.navbar-right ul.nav.navbar-nav li.active a::after { background-color: white; } }
 /* for hd screens(e.g. 1200px and up) */
-@media screen and (min-width: 1200px) { /* line 178, ../sass/partials/_navbar.scss */
+@media screen and (min-width: 1200px) { /* line 177, ../sass/partials/_navbar.scss */
   nav.navbar.navbar-default.navbar-fixed-top { background-color: transparent; border: none; padding: 40px 0; }
-  /* line 185, ../sass/partials/_navbar.scss */
+  /* line 184, ../sass/partials/_navbar.scss */
   nav.navbar.navbar-default.navbar-fixed-top .navbar-header a.navbar-brand { background-color: white; -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; -ms-border-radius: 50%; border-radius: 50%; border-top-left-radius: 0; border-bottom-left-radius: 0; height: 190px; padding: 0; width: 190px; }
-  /* line 195, ../sass/partials/_navbar.scss */
+  /* line 194, ../sass/partials/_navbar.scss */
   nav.navbar.navbar-default.navbar-fixed-top .navbar-header a.navbar-brand svg#logo { width: 100%; height: auto; position: relative; margin-top: 0; margin-left: -15px; -webkit-transition: all linear 0.3s; -moz-transition: all linear 0.3s; -o-transition: all linear 0.3s; -ms-transition: all linear 0.3s; transition: all linear 0.3s; }
-  /* line 203, ../sass/partials/_navbar.scss */
+  /* line 202, ../sass/partials/_navbar.scss */
   nav.navbar.navbar-default.navbar-fixed-top .navbar-header a.navbar-brand svg#logo g#rounded-text, nav.navbar.navbar-default.navbar-fixed-top .navbar-header a.navbar-brand svg#logo g#srijan { opacity: 1; }
-  /* line 216, ../sass/partials/_navbar.scss */
+  /* line 215, ../sass/partials/_navbar.scss */
   nav.navbar.navbar-default.navbar-fixed-top .srijan-navbar.navbar-right ul.nav.navbar-nav { padding-right: 15px; }
-  /* line 227, ../sass/partials/_navbar.scss */
+  /* line 226, ../sass/partials/_navbar.scss */
   nav.navbar.navbar-default.top-nav-collapse { background-color: rgba(0, 0, 0, 0.3); padding: 0; }
-  /* line 233, ../sass/partials/_navbar.scss */
+  /* line 232, ../sass/partials/_navbar.scss */
   nav.navbar.navbar-default.top-nav-collapse .navbar-header a.navbar-brand { background-color: transparent; height: auto; }
-  /* line 238, ../sass/partials/_navbar.scss */
+  /* line 237, ../sass/partials/_navbar.scss */
   nav.navbar.navbar-default.top-nav-collapse .navbar-header a.navbar-brand svg#logo { margin-left: 0; margin-top: -12px; width: 65%; }
-  /* line 243, ../sass/partials/_navbar.scss */
-  nav.navbar.navbar-default.top-nav-collapse .navbar-header a.navbar-brand svg#logo g#rounded-text, nav.navbar.navbar-default.top-nav-collapse .navbar-header a.navbar-brand svg#logo g#srijan { opacity: 0; -webkit-transition: all linear 0.3s; -moz-transition: all linear 0.3s; -o-transition: all linear 0.3s; -ms-transition: all linear 0.3s; transition: all linear 0.3s; } }
+  /* line 242, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.top-nav-collapse .navbar-header a.navbar-brand svg#logo g#rounded-text, nav.navbar.navbar-default.top-nav-collapse .navbar-header a.navbar-brand svg#logo g#srijan { opacity: 0; -webkit-transition: all linear 0.3s; -moz-transition: all linear 0.3s; -o-transition: all linear 0.3s; -ms-transition: all linear 0.3s; transition: all linear 0.3s; }
+  /* line 258, ../sass/partials/_navbar.scss */
+  nav.navbar.navbar-default.top-nav-collapse .srijan-navbar.navbar-right ul.nav.navbar-nav li a { font-size: 18px; } }
 /* line 4, ../sass/partials/_swiper.scss */
 .swiper-container { width: 100%; height: 100%; background-color: black; }
 /* line 9, ../sass/partials/_swiper.scss */
@@ -118,5 +134,183 @@ nav.navbar.navbar-default.navbar-fixed-top .navbar-header a.navbar-brand svg#log
   .swiper-pagination span.swiper-pagination-bullet:hover, .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active { color: black; }
   /* line 147, ../sass/partials/_swiper.scss */
   .swiper-pagination span.swiper-pagination-bullet:hover::after, .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active::after { background-color: white; opacity: 1; -webkit-box-shadow: 0 1px 5px 0px black; -moz-box-shadow: 0 1px 5px 0px black; -o-box-shadow: 0 1px 5px 0px black; -ms-box-shadow: 0 1px 5px 0px black; box-shadow: 0 1px 5px 0px black; -webkit-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1); -ms-transform: scale(1); transform: scale(1); -webkit-transition: all linear 0.2s; -moz-transition: all linear 0.2s; -o-transition: all linear 0.2s; -ms-transition: all linear 0.2s; transition: all linear 0.2s; } }
-@media screen and (min-width: 992px) { /* line 122, ../sass/main.scss */
-  .about-section .upper-wave { bottom: 0; left: 0; } }
+@media screen and (min-width: 1600px) { /* line 162, ../sass/partials/_swiper.scss */
+  .welcome-section { height: 772px; } }
+/* about section */
+/* line 5, ../sass/partials/_about.scss */
+.about-section .upper-wave, .about-section .bottom-wave { position: absolute; bottom: 0; left: 0; z-index: 2; width: 100%; overflow: hidden; display: none; }
+/* line 15, ../sass/partials/_about.scss */
+.about-section .upper-wave svg#shape, .about-section .bottom-wave svg#shape { height: 85px; }
+/* line 22, ../sass/partials/_about.scss */
+.about-section .container-fluid .col-lg-12.green { background-color: #5fec56; }
+/* line 27, ../sass/partials/_about.scss */
+.about-section .container-fluid .col-lg-12.green aside.context-img { max-width: 100%; height: auto; position: relative; z-index: 1; padding-left: 0; }
+/* line 34, ../sass/partials/_about.scss */
+.about-section .container-fluid .col-lg-12.green aside.context-img .bordered-content { display: none; position: absolute; z-index: 1; right: -48px; top: 60px; background-color: transparent; border: 25px solid #f6821f; border-right: none; padding: 100px 130px; }
+/* line 45, ../sass/partials/_about.scss */
+.about-section .container-fluid .col-lg-12.green aside.context-img .bordered-content::before, .about-section .container-fluid .col-lg-12.green aside.context-img .bordered-content::after { position: absolute; right: 0; bottom: 0; background-color: #f6821f; content: ''; width: 25px; height: 33px; }
+/* line 55, ../sass/partials/_about.scss */
+.about-section .container-fluid .col-lg-12.green aside.context-img .bordered-content::after { top: 0; height: 68px; }
+/* line 61, ../sass/partials/_about.scss */
+.about-section .container-fluid .col-lg-12.green aside.context-img .bordered-content span.caption { font-family: "Merriweather", sans-serif; font-size: 20px; font-weight: 400; color: white; text-align: left; line-height: 1.6; -webkit-text-shadow: 0 3px 1px rgba(0, 0, 0, 0.1); text-shadow: 0 3px 1px rgba(0, 0, 0, 0.1); position: relative; z-index: 2; }
+/* line 72, ../sass/partials/_about.scss */
+.about-section .container-fluid .col-lg-12.green aside.context-img .bordered-content span.caption small { font-size: inherit; color: #5ce354; }
+/* line 84, ../sass/partials/_about.scss */
+.about-section .container-fluid .col-lg-12.green article h1 { font-family: "Merriweather", sans-serif; font-size: 150px; font-weight: 900; color: rgba(64, 136, 60, 0.5); text-align: center; text-transform: capitalize; }
+/* line 93, ../sass/partials/_about.scss */
+.about-section .container-fluid .col-lg-12.green article p { font-family: "Roboto", sans-serif; font-size: 18px; font-weight: 300; color: #176028; text-align: justify; line-height: 1.6; padding-top: 20px; padding-left: 20px; padding-right: 20px; }
+
+@media screen and (min-width: 1200px) { /* line 112, ../sass/partials/_about.scss */
+  .about-section { margin-top: -5px; height: 700px; overflow: hidden; }
+  /* line 117, ../sass/partials/_about.scss */
+  .about-section .upper-wave { display: block; bottom: 44px; left: 0; }
+  /* line 123, ../sass/partials/_about.scss */
+  .about-section .container-fluid { background-color: #5fec56; min-height: 600px; padding-top: 60px; }
+  /* line 132, ../sass/partials/_about.scss */
+  .about-section .container-fluid .col-lg-12.green aside.context-img .bordered-content { display: block; }
+  /* line 136, ../sass/partials/_about.scss */
+  .about-section .container-fluid .col-lg-12.green aside.context-img .bordered-content span.caption { position: absolute; left: 56%; top: 70px; width: 650px; }
+  /* line 145, ../sass/partials/_about.scss */
+  .about-section .container-fluid .col-lg-12.green aside.context-img img { -webkit-box-shadow: -40px 21px 1px 0 rgba(0, 0, 0, 0.4); -moz-box-shadow: -40px 21px 1px 0 rgba(0, 0, 0, 0.4); -o-box-shadow: -40px 21px 1px 0 rgba(0, 0, 0, 0.4); -ms-box-shadow: -40px 21px 1px 0 rgba(0, 0, 0, 0.4); box-shadow: -40px 21px 1px 0 rgba(0, 0, 0, 0.4); }
+  /* line 151, ../sass/partials/_about.scss */
+  .about-section .container-fluid .col-lg-12.green article h1 { padding-right: 50px; text-align: right; }
+  /* line 156, ../sass/partials/_about.scss */
+  .about-section .container-fluid .col-lg-12.green article p { padding-top: 50px; padding-left: 55px; padding-right: 55px; }
+  /* line 166, ../sass/partials/_about.scss */
+  .about-section .bottom-wave { display: block; bottom: -678px; z-index: 3; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -o-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); } }
+@media screen and (min-width: 1440px) { /* line 177, ../sass/partials/_about.scss */
+  .about-section { margin-top: -156px; }
+  /* line 180, ../sass/partials/_about.scss */
+  .about-section .upper-wave { bottom: 151px; }
+  /* line 184, ../sass/partials/_about.scss */
+  .about-section .bottom-wave { bottom: -528px; } }
+@media screen and (min-width: 1500px) { /* line 192, ../sass/partials/_about.scss */
+  .about-section { margin-top: -130px; }
+  /* line 195, ../sass/partials/_about.scss */
+  .about-section .upper-wave { bottom: 44px; }
+  /* line 199, ../sass/partials/_about.scss */
+  .about-section .bottom-wave { bottom: -550px; } }
+@media screen and (min-width: 1600px) { /* line 207, ../sass/partials/_about.scss */
+  .about-section { margin-top: -5px; }
+  /* line 210, ../sass/partials/_about.scss */
+  .about-section .upper-wave { bottom: 450px; }
+  /* line 214, ../sass/partials/_about.scss */
+  .about-section .bottom-wave { bottom: -248px; } }
+@media screen and (min-width: 1900px) { /* line 223, ../sass/partials/_about.scss */
+  .about-section .upper-wave { bottom: 272px; }
+  /* line 227, ../sass/partials/_about.scss */
+  .about-section .bottom-wave { bottom: -425px; } }
+/* mission section */
+/* line 2, ../sass/partials/_mission.scss */
+.mission-section { position: relative; }
+/* line 5, ../sass/partials/_mission.scss */
+.mission-section .mission-bg { background-image: url(../img/mission/mission-bg.png); background-size: cover; background-repeat: no-repeat; background-position: left top; width: 100%; height: 100%; max-height: 410px; overflow: hidden; }
+/* line 18, ../sass/partials/_mission.scss */
+.mission-section .container-fluid hgroup h1, .mission-section .container-fluid hgroup span, .mission-section .container-fluid section.mission-cards .cards span.mission-title, .mission-section .container-fluid section.mission-cards .cards p.mission-desc, .mission-section .donate-section .container-fluid.white hgroup h1, .donate-section .mission-section .container-fluid.white hgroup h1, .mission-section .donate-section .container-fluid.white hgroup span, .donate-section .mission-section .container-fluid.white hgroup span, .mission-section .donate-section .container-fluid.white section.sponsor-here hgroup h2, .donate-section .mission-section .container-fluid.white section.sponsor-here hgroup h2 { display: flex; display: -webkit-flex; -webkit-justify-content: center; justify-content: center; -webkit-align-content: center; align-content: center; }
+/* line 28, ../sass/partials/_mission.scss */
+.mission-section .container-fluid hgroup h1 { font-family: "Merriweather", sans-serif; font-size: 150px; font-weight: 900; color: rgba(0, 0, 0, 0.5); text-align: center; text-transform: capitalize; margin-top: 80px; margin-bottom: 0; padding-bottom: 0; }
+/* line 42, ../sass/partials/_mission.scss */
+.mission-section .container-fluid hgroup span { font-family: "Merriweather", sans-serif; font-size: 20px; font-weight: 400; color: #f6821f; text-align: center; line-height: 1.6; -webkit-text-shadow: 0 3px 1px rgba(0, 0, 0, 0.1); text-shadow: 0 3px 1px rgba(0, 0, 0, 0.1); margin-top: 0; padding-top: 0; padding-bottom: 40px; }
+/* line 59, ../sass/partials/_mission.scss */
+.mission-section .container-fluid section.mission-cards { padding-bottom: 40px; }
+/* line 62, ../sass/partials/_mission.scss */
+.mission-section .container-fluid section.mission-cards .cards { padding-top: 10px; padding-bottom: 50px; }
+/* line 66, ../sass/partials/_mission.scss */
+.mission-section .container-fluid section.mission-cards .cards i { min-height: 120px; height: 120px; width: 116px; max-width: 116px; display: block; margin-bottom: 20px; margin-left: auto; margin-right: auto; }
+/* line 78, ../sass/partials/_mission.scss */
+.mission-section .container-fluid section.mission-cards .cards span.mission-title { position: relative; font-family: "Merriweather", sans-serif; font-size: 25px; font-weight: 900; color: #f6821f; text-align: center; padding-top: 15px; }
+/* line 88, ../sass/partials/_mission.scss */
+.mission-section .container-fluid section.mission-cards .cards span.mission-title::before { position: absolute; content: ''; left: 0; top: 0; width: 50%; margin: 0 25%; height: 1px; background-color: #f6821f; }
+/* line 102, ../sass/partials/_mission.scss */
+.mission-section .container-fluid section.mission-cards .cards p.mission-desc { padding-top: 20px; font-family: "Roboto", sans-serif; font-size: 18px; font-weight: 300; text-align: center; line-height: 1.5; color: #176028; }
+
+@media screen and (min-width: 1200px) { /* line 123, ../sass/partials/_mission.scss */
+  .mission-section { margin-top: -50px; }
+  /* line 126, ../sass/partials/_mission.scss */
+  .mission-section .mission-bg { position: absolute; z-index: 1; margin: 0; }
+  /* line 134, ../sass/partials/_mission.scss */
+  .mission-section .container-fluid hgroup h1 { margin-top: 197px; } }
+/* events section */
+/* line 6, ../sass/partials/_events.scss */
+.events-section .container-fluid .col-lg-12.orange { /* gradient background */ background: #fc9945; background: -moz-linear-gradient(top, #fc9945 0%, #f6821f 100%); background: -webkit-linear-gradient(top, #fc9945 0%, #f6821f 100%); background: linear-gradient(to bottom, #fc9945 0%, #f6821f 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc9945', endColorstr='#f6821f',GradientType=0 ); padding-top: 70px; padding-bottom: 70px; }
+/* line 20, ../sass/partials/_events.scss */
+.events-section .container-fluid .col-lg-12.orange section h1 { font-family: "Merriweather", sans-serif; font-size: 150px; font-weight: 900; color: rgba(211, 98, 1, 0.5); text-align: right; text-transform: capitalize; padding-right: 100px; padding-top: 100px; }
+/* line 33, ../sass/partials/_events.scss */
+.events-section .container-fluid .col-lg-12.orange section .article-cols .panel { box-shadow: none; }
+/* line 36, ../sass/partials/_events.scss */
+.events-section .container-fluid .col-lg-12.orange section .article-cols .panel.panel-default { background: none; border: none; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; -ms-border-radius: 0; border-radius: 0; }
+/* line 41, ../sass/partials/_events.scss */
+.events-section .container-fluid .col-lg-12.orange section .article-cols .panel.panel-default .panel-heading { background-color: transparent; border: none; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; -ms-border-radius: 0; border-radius: 0; padding-bottom: 5px; }
+/* line 47, ../sass/partials/_events.scss */
+.events-section .container-fluid .col-lg-12.orange section .article-cols .panel.panel-default .panel-heading .panel-title { background-image: url(../img/events/calendar-icon.png); background-repeat: no-repeat; background-position: 0 0; padding-left: 32px; font-family: "Merriweather", sans-serif; font-size: 20px; font-weight: 900; color: #7f4512; text-align: left; }
+/* line 59, ../sass/partials/_events.scss */
+.events-section .container-fluid .col-lg-12.orange section .article-cols .panel.panel-default .panel-heading .panel-title span { font-family: "Roboto", sans-serif; font-size: 15px; font-weight: 300; color: #7f4512; text-align: left; line-height: normal; padding-top: 2px; display: table-cell; width: 100%; clear: both; }
+/* line 74, ../sass/partials/_events.scss */
+.events-section .container-fluid .col-lg-12.orange section .article-cols .panel.panel-default .panel-body { font-family: "Roboto", sans-serif; font-size: 18px; font-weight: 300; text-align: left; color: white; }
+/* line 89, ../sass/partials/_events.scss */
+.events-section .container-fluid .col-lg-12.orange aside.context-img { max-width: 100%; height: auto; position: relative; z-index: 1; padding-left: 0; }
+/* line 96, ../sass/partials/_events.scss */
+.events-section .container-fluid .col-lg-12.orange aside.context-img .bordered-content { display: none; position: absolute; z-index: 1; right: 325px; top: -20px; background-color: transparent; border: 25px solid #4fb948; border-left: none; padding: 100px 130px; }
+/* line 107, ../sass/partials/_events.scss */
+.events-section .container-fluid .col-lg-12.orange aside.context-img .bordered-content::before, .events-section .container-fluid .col-lg-12.orange aside.context-img .bordered-content::after { position: absolute; left: 0; bottom: 0; background-color: #4fb948; content: ''; width: 25px; height: 64px; }
+/* line 117, ../sass/partials/_events.scss */
+.events-section .container-fluid .col-lg-12.orange aside.context-img .bordered-content::after { top: 0; height: 100px; }
+/* line 123, ../sass/partials/_events.scss */
+.events-section .container-fluid .col-lg-12.orange aside.context-img .bordered-content span.caption { font-family: "Merriweather", sans-serif; font-size: 20px; font-weight: 400; color: white; text-align: right; line-height: 1.6; -webkit-text-shadow: 0 3px 1px rgba(0, 0, 0, 0.1); text-shadow: 0 3px 1px rgba(0, 0, 0, 0.1); position: absolute; z-index: 2; width: 500px; left: -152%; overflow: hidden; }
+
+@media screen and (min-width: 1200px) { /* line 149, ../sass/partials/_events.scss */
+  .events-section .container-fluid { background-color: transparent; min-height: 600px; padding-top: 60px; }
+  /* line 158, ../sass/partials/_events.scss */
+  .events-section .container-fluid .col-lg-12.orange aside.context-img .bordered-content { display: block; }
+  /* line 160, ../sass/partials/_events.scss */
+  .events-section .container-fluid .col-lg-12.orange aside.context-img img { -webkit-box-shadow: 16px 17px 1px 0 rgba(211, 98, 1, 0.8); -moz-box-shadow: 16px 17px 1px 0 rgba(211, 98, 1, 0.8); -o-box-shadow: 16px 17px 1px 0 rgba(211, 98, 1, 0.8); -ms-box-shadow: 16px 17px 1px 0 rgba(211, 98, 1, 0.8); box-shadow: 16px 17px 1px 0 rgba(211, 98, 1, 0.8); position: relative; right: 19px; } }
+@media screen and (min-width: 1600px) { /* line 180, ../sass/partials/_events.scss */
+  .events-section .container-fluid .col-lg-12.orange section h1 { padding-top: 60px; }
+  /* line 187, ../sass/partials/_events.scss */
+  .events-section .container-fluid .col-lg-12.orange aside.context-img img { right: -110px; } }
+/* donate section */
+/* line 5, ../sass/partials/_donate.scss */
+.donate-section .container-fluid.white { background-color: white; background-repeat: no-repeat; background-size: cover; background-position: left top; background-attachment: fixed; /* donate button block */ }
+/* line 13, ../sass/partials/_donate.scss */
+.donate-section .mission-section .container-fluid.white section.mission-cards .cards span.mission-title, .mission-section .donate-section .container-fluid.white section.mission-cards .cards span.mission-title, .donate-section .mission-section .container-fluid.white section.mission-cards .cards p.mission-desc, .mission-section .donate-section .container-fluid.white section.mission-cards .cards p.mission-desc, .donate-section .container-fluid.white hgroup h1, .donate-section .container-fluid.white hgroup span, .donate-section .container-fluid.white section.sponsor-here hgroup h2 { display: flex; display: -webkit-flex; -webkit-justify-content: center; justify-content: center; -webkit-align-content: center; align-content: center; }
+/* line 23, ../sass/partials/_donate.scss */
+.donate-section .container-fluid.white hgroup h1 { font-family: "Merriweather", sans-serif; font-size: 150px; font-weight: 900; color: rgba(0, 0, 0, 0.5); text-align: center; text-transform: capitalize; margin-top: 80px; margin-bottom: 0; padding-bottom: 0; }
+/* line 37, ../sass/partials/_donate.scss */
+.donate-section .container-fluid.white hgroup span { font-family: "Merriweather", sans-serif; font-size: 20px; font-weight: 400; color: black; text-align: center; line-height: 1.6; -webkit-text-shadow: 0 3px 1px rgba(0, 0, 0, 0.1); text-shadow: 0 3px 1px rgba(0, 0, 0, 0.1); margin-top: 0; padding-top: 0; padding-bottom: 40px; }
+/* line 53, ../sass/partials/_donate.scss */
+.donate-section .container-fluid.white section { padding-top: 70px; padding-bottom: 50px; }
+/* line 57, ../sass/partials/_donate.scss */
+.donate-section .container-fluid.white section h2 { font-family: "Merriweather", sans-serif; font-size: 28px; font-weight: 400; text-align: left; color: #f6821f; margin-top: 50px; margin-bottom: 20px; }
+/* line 71, ../sass/partials/_donate.scss */
+.donate-section .container-fluid.white section .media .media-left span.step { background-color: #f6821f; padding: 0px 6px; font-family: "Roboto", sans-serif; font-size: 20px; font-weight: 900; color: white; text-align: center; line-height: normal; display: inline-block; }
+/* line 86, ../sass/partials/_donate.scss */
+.donate-section .container-fluid.white section .media .media-body { font-family: "Roboto", sans-serif; font-size: 18px; font-weight: 300; text-align: left; line-height: normal; color: #176028; }
+/* line 99, ../sass/partials/_donate.scss */
+.donate-section .container-fluid.white section.sponsor-here { background-image: url(../img/donate/donate-btn-bg.jpg); background-repeat: no-repeat; background-position: left top; background-size: cover; position: relative; z-index: 1; }
+/* line 108, ../sass/partials/_donate.scss */
+.donate-section .container-fluid.white section.sponsor-here hgroup h2 { font-family: "Merriweather", sans-serif; font-size: 28px; font-weight: 400; color: white; text-align: center; line-height: 1.5; margin-top: 30px; margin-bottom: 0; padding-bottom: 0; }
+/* line 122, ../sass/partials/_donate.scss */
+.donate-section .container-fluid.white section.sponsor-here hgroup span { font-family: "Roboto", sans-serif; font-size: 14px; font-weight: 300; text-align: center; color: white; padding: 16px 0; }
+/* line 134, ../sass/partials/_donate.scss */
+.donate-section .container-fluid.white section.sponsor-here .btn.btn-default { width: 100%; background: none; border: none; }
+/* line 139, ../sass/partials/_donate.scss */
+.donate-section .container-fluid.white section.sponsor-here .btn.btn-default a { width: 100%; margin: 0 auto; max-width: 300px; padding: 12px; display: block; cursor: pointer; background-color: #4fb948; -webkit-border-radius: 50px; -moz-border-radius: 50px; -o-border-radius: 50px; -ms-border-radius: 50px; border-radius: 50px; font-family: "Roboto", sans-serif; font-size: 24px; font-weight: 900; text-align: center; line-height: normal; color: white; }
+/* line 156, ../sass/partials/_donate.scss */
+.donate-section .container-fluid.white section.sponsor-here .btn.btn-default a:hover { text-decoration: none; }
+
+@media screen and (min-width: 1200px) { /* line 170, ../sass/partials/_donate.scss */
+  .donate-section { height: 1000px; overflow: hidden; }
+  /* line 174, ../sass/partials/_donate.scss */
+  .donate-section .container-fluid { /* donate button block */ }
+  /* line 175, ../sass/partials/_donate.scss */
+  .donate-section .container-fluid.white { background-image: url(../img/donate/donate-bg.jpg); background-position: left -300px; }
+  /* line 183, ../sass/partials/_donate.scss */
+  .donate-section .container-fluid section div.col-lg-4:first-of-type { padding-left: 0; }
+  /* line 195, ../sass/partials/_donate.scss */
+  .donate-section .container-fluid section.sponsor-here .btn.btn-default { position: absolute; bottom: -30px; left: 0; -webkit-transition: all linear 0.1s; -moz-transition: all linear 0.1s; -o-transition: all linear 0.1s; -ms-transition: all linear 0.1s; transition: all linear 0.1s; }
+  /* line 201, ../sass/partials/_donate.scss */
+  .donate-section .container-fluid section.sponsor-here .btn.btn-default a { -webkit-box-shadow: 0 7px 0 2px #176028; -moz-box-shadow: 0 7px 0 2px #176028; -o-box-shadow: 0 7px 0 2px #176028; -ms-box-shadow: 0 7px 0 2px #176028; box-shadow: 0 7px 0 2px #176028; -webkit-transition: all linear 0.1s; -moz-transition: all linear 0.1s; -o-transition: all linear 0.1s; -ms-transition: all linear 0.1s; transition: all linear 0.1s; }
+  /* line 206, ../sass/partials/_donate.scss */
+  .donate-section .container-fluid section.sponsor-here .btn.btn-default:hover, .donate-section .container-fluid section.sponsor-here .btn.btn-default:focus { bottom: -35px; -webkit-transition: all linear 0.1s; -moz-transition: all linear 0.1s; -o-transition: all linear 0.1s; -ms-transition: all linear 0.1s; transition: all linear 0.1s; }
+  /* line 210, ../sass/partials/_donate.scss */
+  .donate-section .container-fluid section.sponsor-here .btn.btn-default:hover a, .donate-section .container-fluid section.sponsor-here .btn.btn-default:focus a { -webkit-box-shadow: 0 2px 0 2px #176028; -moz-box-shadow: 0 2px 0 2px #176028; -o-box-shadow: 0 2px 0 2px #176028; -ms-box-shadow: 0 2px 0 2px #176028; box-shadow: 0 2px 0 2px #176028; } }
