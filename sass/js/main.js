@@ -57,3 +57,61 @@ sr.reveal(contentReveal, {
     reset: false,
 });
 
+//feedback form input animations
+(function($){
+    var formGrp = $('.form-group'),
+        formGrpLarge = $('.form-group-lg');
+    
+    // for input fields
+    formGrp.mousedown(function(){
+       $(this).find('label').animate({
+           top: '-22px',
+           fontSize: '15px'
+       }, {
+           duration: 95,
+           easing: 'linear'
+       }),
+    
+       $(this).find('input.form-control').addClass('focussed');
+        
+    });
+    
+    formGrp.mouseout(function(){
+       $(this).find('label').animate({
+           top: '0',
+           fontSize: '20px'
+       }, {
+           duration: 95,
+           easing: 'linear'
+       }),
+    
+       $(this).find('input.form-control').removeClass('focussed'); 
+    });
+    
+    //for textarea
+    formGrpLarge.mousedown(function(){
+       $(this).find('label').animate({
+           top: '-22px',
+           fontSize: '15px'
+       }, {
+           duration: 95,
+           easing: 'linear'
+       }),
+    
+       $(this).find('textarea.form-control').addClass('focussed');
+        
+    });
+    
+    formGrpLarge.mouseout(function(){
+       $(this).find('label').animate({
+           top: '0',
+           fontSize: '20px'
+       }, {
+           duration: 95,
+           easing: 'linear'
+       }),
+    
+       $(this).find('textarea.form-control').removeClass('focussed'); 
+    });
+    
+})(jQuery);

@@ -19,6 +19,7 @@ $form-bg-color: rgba(185, 255, 180, 1);
                     &.close{
                         margin-top: 16px;
                         padding-top: 5px;
+                        padding-right: 30px;
                         opacity: 1;
                         @include transition(all, linear, 0.2s);
                         
@@ -43,7 +44,7 @@ $form-bg-color: rgba(185, 255, 180, 1);
                         margin-top: 30px;
                         margin-bottom: 40px;
                         padding-top: 30px;
-                        padding-left: 60px;
+                        padding-left: 30px;
                         
                         font-family: $roboto;
                         font-size: $global-semi-header + 2px;
@@ -58,6 +59,7 @@ $form-bg-color: rgba(185, 255, 180, 1);
                     width: 100%;
                     float: left;
                     
+                    padding-right: 30px;
                     padding-bottom: 10px;                    
                     border-bottom: 1px solid white;
                     
@@ -69,11 +71,107 @@ $form-bg-color: rgba(185, 255, 180, 1);
             }
             
             .modal-body{
-                
+                form{
+                    &#send-feedback{
+                        .form-group{position: relative;}
+                        
+                        label{
+                            &.control-label{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                
+                                font-family: $roboto;
+                                font-weight: $roboto-regular;
+                                font-size: $global-caption;
+                                color: black;
+                                text-align: left;
+                                text-transform: capitalize;
+                            }
+                            
+                            
+                            }
+                        
+                        input{padding-left: 65px;}
+                        
+                        input[type=text], input[type=email], textarea{
+                            &.form-control{
+                                padding-top: 0;
+                                background: none;
+                                border: none;
+                                border-bottom: 2px solid black;
+                                box-shadow: none;
+                                @include border-radius(0);
+                                
+                                font-family: $roboto;
+                                font-weight: $roboto-regular;
+                                font-size: $global-caption -5px;
+                                color: $dark-green;
+                                text-align: left;
+                                                                
+                                //focussed state
+                                &.focussed{
+                                    padding-top: 5px;
+                                    padding-left: 10px;
+                                    border: none;
+                                    background-color: rgba(0, 0, 0, 0.08);
+                                    @include border-radius(4px);
+                                    @include transition(all, linear, 0.2s);
+                                }
+                            }
+                        }
+                        
+                        .form-group-lg{
+                            padding-left: 15px;
+                            padding-right: 15px; 
+                            
+                            label{
+                                &.control-label{padding-left: 30px;}
+                            }
+                            
+                            textarea{
+                                resize: none;
+                                margin-top: 10px;
+                                padding-top: 10px;
+                                padding-left: 0;
+                            }
+                        }
+                        
+                        // positioning textarea for comments section 
+                        .message-block{margin-top: 40px;}
+                    }
+                }
             }
             
             .modal-footer{
+                margin-top: 80px;
+                padding: 0;
                 border-top: none;
+                
+                button{
+                    &.btn{
+                        &.btn-primary{
+                            width: 100%;
+                            background-color: rgba(79, 185, 72, 1);
+                            padding: 15px 0;
+                            border: none;
+                            @include border-radius(0);
+                            @include transition(all, linear, 0.2s);
+                            
+                            font-family: $roboto;
+                            font-size: $global-title + 10px;
+                            font-weight: $bold;
+                            color: $dark-green;
+                            text-align: center;
+                            text-transform: capitalize;
+                            
+                            &:hover, &:focus{
+                                background-color: $dark-green;
+                                color: white;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
