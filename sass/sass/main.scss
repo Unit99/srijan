@@ -43,8 +43,7 @@ $nav-font: 22px;
     $article-text: $global-text;
 
     //footer
-    $footer-msg: $global-alert;
-    $copyright: 13px;
+    $footer-msg: 13px;
 
 //font-weight
 $merriweather-regular: 400;
@@ -88,6 +87,8 @@ html, body{
     }
 }
 
+//attributes for wave shapes are inside _about.scss
+
 .welcome-section{
     background-color: rgba(95, 236, 86, 1);
 }//rest of the welcome section based attributes are coming from _swiper.scss partial
@@ -107,5 +108,18 @@ html, body{
 @import 'partials/mission';
 @import 'partials/events';
 @import 'partials/donate';
+@import 'partials/contact';
+@import 'partials/footer';
+@import 'partials/form';
+
+
+/* '.mobile-only' selector will only work for all kinds of mobile devices */
+@media screen and (min-width: $min-width){
+    .mobile-only{display: block;}
+}
+
+@media screen and (min-width: $hd-view){
+    .mobile-only{display: none;}
+}
 
 

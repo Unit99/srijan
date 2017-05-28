@@ -16,6 +16,11 @@ function introSwiper() {
     effect: 'fade',
     paginationBulletRender: function(swiper, index, className) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+    breakpoints: {
+        768: {
+            parallax: false
+        }
     }
 });
     
@@ -33,7 +38,7 @@ var headerReveal = document.body.querySelectorAll('.titleRevealFromFade'),
 sr.reveal(headerReveal, {
     origin: 'top',
     distance: '50px',
-    duration: 1500,
+    duration: 950,
     delay: 50,
     opacity: 0,
     easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
@@ -42,9 +47,9 @@ sr.reveal(headerReveal, {
 });
 
 sr.reveal(contentReveal, {
-    origin: 'bottom',
+    origin: 'right',
     distance: '55px',
-    duration: 1700,
+    duration: 1000,
     delay: 55,
     opacity: 0,
     easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',

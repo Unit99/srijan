@@ -1,0 +1,119 @@
+/* feedback form modal */
+$form-bg-color: rgba(185, 255, 180, 1);
+
+.feedback-form{
+    .modal-dialog{
+        .modal-content{
+            background-color: $form-bg-color;
+            border: none;
+            @include border-radius(0);
+            
+            .modal-header{
+                background-image: url(../img/form/form-header-bg.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: left top;
+                border-bottom: none;
+                
+                button{//close button
+                    &.close{
+                        margin-top: 16px;
+                        padding-top: 5px;
+                        opacity: 1;
+                        @include transition(all, linear, 0.2s);
+                        
+                        font-family: $roboto;
+                        font-size: $global-caption;
+                        font-weight: $roboto-regular;
+                        color: white;
+                        text-align: center;
+                        text-shadow: none;
+                        
+                        &:hover, &:focus{
+                            outline: none;
+                            color: black;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                
+                //title
+                h4{
+                    &.modal-title{
+                        margin-top: 30px;
+                        margin-bottom: 40px;
+                        padding-top: 30px;
+                        padding-left: 60px;
+                        
+                        font-family: $roboto;
+                        font-size: $global-semi-header + 2px;
+                        font-weight: $roboto-regular;
+                        color: white;
+                        text-align: left;
+                        @include text-shadow(0, 3px, 1px, rgba(0, 0, 0, 0.1));
+                    }
+                }
+                
+                span{
+                    width: 100%;
+                    float: left;
+                    
+                    padding-bottom: 10px;                    
+                    border-bottom: 1px solid white;
+                    
+                    font-family: $roboto;
+                    font-size: $global-alert + 1px;
+                    font-weight: $roboto-regular;
+                    color: black;
+                }
+            }
+            
+            .modal-body{
+                
+            }
+            
+            .modal-footer{
+                border-top: none;
+            }
+        }
+    }
+}
+
+//320px and up
+@media screen and (min-width: $min-width){
+    .feedback-form{
+        .modal-dialog{
+            .modal-content{
+                .modal-header{
+                    min-height: 350px;
+                    
+                    span{text-align: center;}
+                }
+            }
+        }
+    }
+}
+
+//768px and up
+@media screen and (min-width: $tablet-view){
+    .feedback-form{
+        .modal-dialog{
+            width: 674px;
+        }
+    }
+}
+
+//1200px and up
+@media screen and (min-width: $hd-view){
+    .feedback-form{
+        .modal-dialog{
+            width: 1170px;
+            
+            .modal-content{
+                .modal-header{
+                    span{text-align: right;}
+                }
+            }
+        }
+    }
+}

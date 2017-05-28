@@ -30,8 +30,40 @@ nav{
     &.navbar{
         &.navbar-default{
             &.navbar-fixed-top{
-
+                .navbar-header{
+                    &.page-scroll{
+                        a{
+                            &.navbar-brand{
+                                padding-top: 0;
+                                
+                                &.page-scroll{
+                                    svg{display: none;}
+                                    img{
+                                        &.mobile-logo{
+                                            width: 62px;
+                                            height: 87px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
+              }
+            
+            //while scrolling
+            &.top-nav-collapse{
+                .navbar-header{
+                    &.page-scroll{
+                        a{
+                            &.navbar-brand{
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
             }
         }
     }
@@ -76,7 +108,7 @@ nav{
                 
                 .srijan-navbar{
                     &.navbar-right{
-                        padding: 80px 0;
+                        padding: 5px 0;
                         
                         ul{
                             &.nav{
@@ -130,7 +162,6 @@ nav{
                         &.navbar-brand{
                             background-color: transparent;
                             height: auto;
-                            max-height: 50px;
                         }
                     }
                 }
@@ -192,6 +223,7 @@ nav{
                             
                             svg{
                                 &#logo{ 
+                                    display: block;
                                     width: 100%;
                                     height: auto; //making the svg logo responsive
                                     position: relative;
@@ -204,12 +236,17 @@ nav{
                                     }
                                 }
                             }
+                            
+                            img{
+                                &.mobile-logo{display: none;}
+                            }
                         }
                     }
                 }
                 
                 .srijan-navbar{
                     &.navbar-right{
+                        padding: 80px 0;
                         ul{
                             &.nav{
                                 &.navbar-nav{
@@ -232,6 +269,8 @@ nav{
                         &.navbar-brand{
                             background-color: transparent;
                             height: auto;
+                            max-height: 50px;
+                            padding-top: 0 !important;
                             
                             svg{
                                 &#logo{
@@ -251,6 +290,7 @@ nav{
                 
                 .srijan-navbar{
                     &.navbar-right{
+                        padding: 10px 0;
                         ul{
                             &.nav{
                                 &.navbar-nav{

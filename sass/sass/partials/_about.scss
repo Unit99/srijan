@@ -1,20 +1,33 @@
-/* about section */
-.about-section{
-    
-    //top wave shaped svg
-    .upper-wave, .bottom-wave{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 2;
+/* 
+upper wave shape => independent block => outside of about main section tag , tricky part !!! 
+*/
+
+@media screen and (min-width: $min-width){
+    .upper-wave{display: none;}
+}
+
+@media screen and (min-width: $hd-view){
+    .upper-wave{
+        display: block;
+        position: relative;
         width: 100%;
-        overflow: hidden;
-        display: none;
-       
-        svg{
-            &#shape{height: 85px;}
+        background-color: rgba(95, 236, 86, 1);
+    
+        .upper-wave-content{
+            width: 100%;
+            height: 64px;
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            top: -63px;
         }
     }
+}
+
+
+
+/* about section */
+.about-section{
     
     //about content section
     .container-fluid{
@@ -71,7 +84,7 @@
                                 
                                     small{
                                         font-size: inherit;
-                                        color: $green;
+                                        color: rgba(42, 165, 70, 1);
                                     }
                                 }
                             }
@@ -107,26 +120,92 @@
     }
 }
 
+
+//320px and upto 1199px => special range to cover the landscape mode ipad like devices
+@media screen and (min-width: $min-width) and (max-width: $desktop-view + 207px){
+    .about-section{        
+        height: auto;
+    
+    //about content section
+    .container-fluid{
+        .col-lg-12{
+            &.green{
+                background-color: rgba(95, 236, 86, 1);
+                
+                //context image with parallax scrolling
+                aside{
+                    &.context-img{
+                        img{display: none;}
+                        
+                        .bordered-content{
+                            display: none;
+                        }                       
+                    }
+                }
+                
+                //right side main content
+                article{
+                    h1{
+                        font-size: 5em;
+                        color: white;
+                        text-align: left;
+                        
+                        margin-top: 0;
+                        padding-top: 0;
+                        padding-bottom: 5px;
+                        position: relative;                        
+                        border-bottom: 1px solid white;
+                        
+                        &::before{
+                            width: 15px;
+                            height: 15px;
+                            position: relative;
+                            top: 0;
+                            content: '';
+                            display: block;
+                            left: 0;
+                            border-left: 25px solid transparent;
+                            border-right: 25px solid transparent;
+                            border-bottom: 25px solid transparent;
+                            border-top: 25px solid white;
+                        }
+                    }
+                    
+                    p{
+                        font-family: $roboto;
+                        font-size: $base-font;
+                        font-weight: $roboto-regular;
+                        color: $dark-green;
+                        text-align: left;
+                        
+                        padding: 0;
+                        padding-bottom: 0px;
+                        
+                        &:last-of-type{
+                            padding-bottom: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
 //1200px and up
 @media screen and (min-width: $hd-view){
     .about-section{
-        margin-top: -5px;
-        height: 700px;
+        width: 100%;
+        height: auto;
+        background-color: rgba(95, 236, 86, 1);
         overflow: hidden;
-        
-        .upper-wave{
-            display: block;
-            bottom: 44px;
-            left: 0;
-        }
+        padding-bottom: 128px; //double the height of the bottom wave svg shape
         
         .container-fluid{
-            background-color: rgba(95, 236, 86, 1);
-            min-height: 600px;
-            padding-top: 60px;
-            
             .col-lg-12{
                 &.green{
+                    padding-top: 65px;
+                    
                     aside{
                         &.context-img{
                             .bordered-content{
@@ -142,7 +221,10 @@
                                 }
                             }
                             
-                            img{@include box-shadow(-40px, 21px, 1px, 0, rgba(0, 0, 0 ,0.4));}
+                            img{
+                                position: relative;
+                                @include box-shadow(-40px, 21px, 1px, 0, rgba(0, 0, 0 ,0.4));
+                            }
                         }
                     }
                     
@@ -162,70 +244,51 @@
             }
             }
         }
-        
-        .bottom-wave{
-            display: block;
-            bottom: -678px;
-            z-index: 3;
-            @include rotate(180deg);            
-        }
     }
 }
 
-//HD => 1440px and up
-@media screen and (min-width: $hd-view + 240px){
-    .about-section{
-        margin-top: -156px;
-        
-        .upper-wave{
-            bottom: 151px;
-        }
-        
-        .bottom-wave{
-            bottom: -528px;
-        }
-    }
-}
-
-//1500px and up
-@media screen and (min-width: $hd-view + 300px){
-    .about-section{
-        margin-top: -130px;
-        
-        .upper-wave{
-            bottom: 44px;
-        }
-        
-        .bottom-wave{
-            bottom: -550px;
-        }
-    }
-}
-
-//FHD => 1600px and up
+//1600px and up
 @media screen and (min-width: $hd-view + 400px){
     .about-section{
-        margin-top: -5px;
-        
-        .upper-wave{
-            bottom: 450px;
-        }
-        
-        .bottom-wave{
-            bottom: -248px;
+        .container-fluid{
+            .col-lg-12{
+                &.green{
+                    aside{
+                        &.context-img{
+                            img{left: -50px;}
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
-//FHD => 1900px and up
-@media screen and (min-width: $hd-view + 700px){
-    .about-section{
-        .upper-wave{
-            bottom: 272px;
-        }
-        
-        .bottom-wave{
-            bottom: -425px;
+
+/* 
+bottom wave shape => independent block => outside of about main section tag , tricky part 2 !!! 
+*/
+
+@media screen and (min-width: $min-width){
+    .bottom-wave{display: none;}
+}
+
+@media screen and (min-width: $hd-view){
+    .bottom-wave{
+        display: block;
+        position: relative;
+        width: 100%;
+        background-color: rgba(95, 236, 86, 1);
+    
+        .bottom-wave-content{
+            width: 100%;
+            height: 64px;
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            bottom: -63px;
+            @include rotate(180deg);
         }
     }
 }
+

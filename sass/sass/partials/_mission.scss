@@ -9,7 +9,7 @@
         background-position: left top;        
         width: 100%;  
         height: 100%;
-        max-height: 410px;
+        max-height: 490px;
         overflow: hidden;
     }
     
@@ -25,8 +25,7 @@
         }
         
         hgroup{        
-            h1{
-            @extend %center;            
+            h1{           
             font-family: $merriweather;
             font-size: $global-header;
             font-weight: $bold;
@@ -40,7 +39,6 @@
         }
         
             span{
-            @extend %center;
             font-family: $merriweather;
             font-size: $global-caption;
             font-weight: $merriweather-regular;
@@ -118,11 +116,74 @@
     
 }
 
+
+//320px and upto 1199px => special range to cover the landscape mode in ipad like devices
+@media screen and (min-width: $min-width) and (max-width: $desktop-view + 207px){
+    .mission-section{
+        margin-top: -10px;
+        
+    .mission-bg{
+        background-image: none;
+        background-color: white;
+    }
+    
+    .container-fluid{
+        hgroup{        
+            h1{ 
+            font-size: 4.3em;
+            color: rgba(95, 236, 86, 1);
+            text-align: right;
+            
+            margin-top: 0px;
+            margin-bottom: 0;
+            padding-top: 30px;
+            padding-bottom: 5px;
+            position: relative;
+            border-bottom: 1px solid rgba(95, 236, 86, 1);
+                
+            &::after{
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                content: '';
+                display: block;
+                border-left: 25px solid transparent;
+                border-right: 25px solid transparent;
+                border-bottom: 25px solid transparent;
+                border-top: 25px solid rgba(95, 236, 86, 1);
+            }     
+        }
+        
+            span{
+                font-family: $roboto;
+                font-size: $base-font;
+                font-weight: $roboto-regular;
+                color: $dark-green;
+                text-align: right;
+                
+                width: 100%;
+                float: left;
+                padding: 0;
+                padding-top: 15px;
+                padding-bottom: 36px;
+            }
+        }
+        
+        section{
+            &.mission-cards{
+                
+            }
+        }
+    }
+    
+}
+}
+
 //1200px and up
 @media screen and (min-width: $hd-view){
-    .mission-section{
-        margin-top: -50px;
-        
+    .mission-section{        
         .mission-bg{
             position: absolute;
             z-index: 1;
@@ -131,7 +192,25 @@
         
         .container-fluid{
             hgroup{
-                h1{margin-top: 197px;}  
+                                
+                h1{
+                    display: flex;
+                    display: -webkit-flex;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-align-content: center;
+                    align-content: center;
+                    margin-top: 197px;
+                }  
+                
+                span{
+                    display: flex;
+                    display: -webkit-flex;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-align-content: center;
+                    align-content: center;
+                }
             }
             
             section{

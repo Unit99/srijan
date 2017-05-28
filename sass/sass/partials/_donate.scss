@@ -153,7 +153,8 @@
                                 line-height: normal;
                                 color: white;
                                 
-                                &:hover{
+                                &:hover, &:focus{
+                                    outline: none;
                                     text-decoration: none;
                                 }
                             }

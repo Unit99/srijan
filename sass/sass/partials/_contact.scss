@@ -1,0 +1,229 @@
+/* contact section */
+.contact-section{
+    &.dark{
+        background-color: $dark-ash;
+        background-image: url(../img/contact/contact-bg.jpg);
+        background-size: cover;
+        background-position: left top;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-top: -80px;
+        
+        //contact content section
+        .container-fluid{
+            .col-lg-12{
+                aside{   
+                    position: relative;
+                    
+                   .bordered-content{
+                            display: none;
+                            position: absolute;
+                            z-index: 1;
+                            right: -48px;
+                            top: 60px;
+                            background-color: transparent;
+                            border: 25px solid $orange;
+                            border-right: none;
+                            padding: 100px 130px;
+                            
+                            &::before, &::after{
+                                position: absolute;
+                                right: 0;
+                                bottom: 0;
+                                background-color: $orange;
+                                content: '';
+                                width: 25px;
+                                height: 33px;
+                            }
+                            
+                            &::after{
+                                top: 0;
+                                height: 68px;
+                            }
+                            
+                            span{
+                                &.caption{
+                                    font-family: $merriweather;
+                                    font-size: $global-caption;
+                                    font-weight: $merriweather-regular;
+                                    color: white;
+                                    text-align: left;
+                                    line-height: 1.6;
+                                    @include text-shadow(0, 3px, 1px, rgba(0, 0, 0, 0.1));
+                                    position: relative;
+                                    z-index: 2;
+                                
+                                    small{
+                                        font-size: inherit;
+                                        color: rgba(42, 165, 70, 1);
+                                        
+                                        &.orange{color: rgba(250, 144, 54, 1);}
+                                    }
+                                }
+                            }
+                        } 
+                }
+                
+                //right side main content
+                article{
+                    h1{
+                        font-family: $merriweather;
+                        font-size: $global-header;
+                        font-weight: $bold;
+                        color: rgba(0, 0, 0, 0.5);
+                        text-align: center;
+                        text-transform: capitalize;
+                    }
+                    
+                    p{
+                        width: 100%;
+                        
+                        span{
+                            width: 100%;
+                            margin-bottom: 16px;
+                            
+                            font-family: $roboto;
+                            font-size: $global-text;
+                            font-weight: $roboto-regular;
+                            color: white;
+                            text-align: left;
+                            
+                            &.phone{display: none;}
+                            
+                            i{
+                                @include icon-size(30px, 30px, inline-block);
+                                margin-right: 9px;
+                                position: relative;
+                                vertical-align: baseline;
+                                left: 0;
+                                top: 10px;
+                            }
+                        }
+                    }
+                }
+                
+                &.sub-footer{
+                    width: 100%;
+                    background-color: $dark-ash;
+                    
+                    .social-link-grp{
+                        padding-top: 15px;
+                        
+                        p{
+                            width: 100%;
+                            font-family: $roboto;
+                            font-size: $global-alert;
+                            font-weight: $roboto-regular;
+                            color: $ash;
+                            text-align: left;
+                        }
+                        
+                        .social-icon-grp{
+                            padding-top: 10px;
+                            
+                            a{
+                                outline: none;
+                                @include icon-size(30px, 30px, inline-block);
+                                margin-right: 20px;
+                                opacity: 0.2;
+                                @include transition(opacity, linear, 0.3s);
+                                
+                                i{
+                                    @include icon-size(30px, 30px, inline-block);
+                                }
+                                
+                                &:hover{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+//1200px and up
+@media screen and (min-width: $hd-view){
+    .contact-section{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        
+        
+        &.dark{
+            .container-fluid{
+            .col-lg-12{
+                aside{                    
+                    .bordered-content{
+                                display: block;
+                                
+                                span{
+                                    &.caption{
+                                    position: absolute;
+                                    left: 8%;
+                                    top: 70px;
+                                    width: 650px;
+                                    }
+                                }
+                            }}
+                
+                //right side main content
+                article{
+                    float: left;                    
+                    padding-left: 160px;
+
+                    h1{
+                        margin-top: calc(100vh - 65%);
+                        text-align: left;  
+                    }
+
+                    p{                        
+                        margin-left: -100px;
+                        padding-top: 28px;
+                        padding-right: 55px;
+                        float: left;
+                        
+                        text-align: left;
+
+                        span{
+                            float: left;
+
+                            a{
+                                color: inherit;
+                            }
+                        }
+                    }
+                }
+                
+                &.sub-footer{
+                    background-color: transparent;
+                    
+                    .social-link-grp{
+                        background-color: $dark-ash;
+                        position: relative;
+                        
+                        &::before{
+                            content: '';
+                            background-color: $dark-ash;
+                            position: absolute;
+                            width: 110%;
+                            overflow: hidden;
+                            left: 0;
+                            top: 85%;
+                            margin-left: -20px;
+                            padding: 10px;
+                        }
+                        
+                        p{
+                           padding-left: 0px; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}

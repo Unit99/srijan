@@ -1,5 +1,12 @@
 //all mixins
 
+//mixin for icon dimensions => optional usage
+@mixin icon-size($width, $height, $display){
+    width: $width;
+    height: $height;
+    display: $display;
+}
+
 //text-shadow
 @mixin text-shadow($top, $left, $blur, $color){
     -webkit-text-shadow: $top $left $blur $color;

@@ -1,12 +1,5 @@
 //all sprite icons
 
-//mixin for icon dimensions
-@mixin icon-size($width, $height, $display){
-    width: $width;
-    height: $height;
-    display: $display;
-}
-
 //icons for mission section
 $mission-icon-spacing: 10px;
 $mission-icon-layout: horizontal;
@@ -34,4 +27,42 @@ $mission-icon-layout: horizontal;
 
 .houses-icon{
     @include mission-icon-sprite(houses);
+}
+
+.disabled-icon{
+    @include mission-icon-sprite(disabled);
+}
+
+
+//icons for contact section
+$contact-icon-spacing: 10px;
+$contact-icon-layout: horizontal;
+@import '../img/contact-icon/*.png';
+
+.location-icon{
+    @include contact-icon-sprite(location);
+}
+
+.phone-icon{
+    @include contact-icon-sprite(phone);
+}
+
+.mail-icon{
+    @include contact-icon-sprite(mail);
+}
+
+.fb-icon{
+    @include contact-icon-sprite(facebook);
+}
+
+.twitter-icon{
+    @include contact-icon-sprite(twitter);
+}
+
+.whatsapp-icon{
+    @include contact-icon-sprite(whatsapp);
+}
+
+.snapchat-icon{
+    @include contact-icon-sprite(snapchat);
 }
